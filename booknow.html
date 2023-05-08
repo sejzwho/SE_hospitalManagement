@@ -1,65 +1,43 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teeth First </title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MedXTech</title>
 
-    <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+  </head>
+  <body>
+    <!-- booking section starts   -->
+    <section class="book" id="book">
+      <h1 class="heading"><span>book</span> now</h1>
 
-    <!-- custom css file link  -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="html/Orthopedic.html">
-
-</head>
-<body>
-    <!-- <header class="header">
-
-        <a href="#" class="logo"> <i class="fas fa-heartbeat"></i>MedXTech</a>
-    
-        <nav class="navbar">
-            <a href="#home">home</a>
-            <a href="#services">services</a>
-            <a href="#about">about</a>
-            <a href="#doctors">doctors</a>
-            <a href="#review">review</a>
-             <form action="" class="navbar1">
-                <input type="text" placeholder="Search anything" name="q">
-                <button type="submit"></button>
-            </form> -->
-    
-        <!-- </nav>
-    
-        <div id="menu-btn" class="fas fa-bars"></div>
-    
-    </header> -->
-<!-- booking section starts   -->
- <section class="book" id="book">
-
-    <h1 class="heading"> <span>book</span> now </h1>    
-
-    <div class="row">
-
+      <div class="row">
         <div class="image">
-            <img src="image/book-img.svg" alt="">
+          <img src="image/book-img.svg" alt="" />
         </div>
 
-        <form action="">
-            <h3>book appointment</h3>
-            <input type="text" placeholder="Name" class="box">
-            <input type="number" placeholder="Number" class="box">
-            <input type="email" placeholder="Email" class="box">
-            <input type="text" placeholder="Age" class="box">
-            <input type="text" placeholder="Gender" class="box">
-            <input type="text" placeholder="Allergies (if any)" class="box">
-           <input type="date" placeholder="Date" class="box">
-            <input type="submit" value="book now" class="btn">
+        <form id="myForm" action="">
+          <h3>book appointment</h3>
+          <h3 id="doctortype"></h3>
+          <input id="name" type="text" placeholder="Name" class="box" />
+          <input id="age" type="number" placeholder="Age" class="box" />
+          <input id="email" type="email" placeholder="Email" class="box" />
+          <input id="number" type="text" placeholder="Number" class="box" />
+          <input id="gender" type="text" placeholder="Gender" class="box" />
+          <input id="allergies" type="text" placeholder="Allergies (if any)" class="box" />
+          <input id="date" type="date" placeholder="Date" class="box" />
+          <input type="button" value="Book"id="submitbtn" class="btn" />
         </form>
-
-    </div>
-
- </section> 
+      </div>
+    </section>
+  </body>
+  <script src="js/booknow.js"></script>
+</html>
