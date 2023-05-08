@@ -52,7 +52,7 @@ function addData() {
       date: date1,
     })
     .then((docRef) => {
-      console.log("Doc added with ID: ", docRef.id);
+      alert("Appointment Booked" );
       document.getElementById("myForm").reset();
     })
     .catch((error) => {
