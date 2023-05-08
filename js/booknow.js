@@ -29,16 +29,16 @@ function addData() {
   const allergies1 = document.getElementById("allergies").value;
   const date1 = document.getElementById("date").value;
 
-  console.log("Data to be added: ", {
-    doctype: doctype,
-    name: name1,
-    age: age1,
-    email: email1,
-    number: number1,
-    gender: gender1,
-    allergies: allergies1,
-    date: date1,
-  });
+  // console.log("Data to be added: ", {
+  //   doctype: doctype,
+  //   name: name1,
+  //   age: age1,
+  //   email: email1,
+  //   number: number1,
+  //   gender: gender1,
+  //   allergies: allergies1,
+  //   date: date1,
+  // });
 
   db.collection("appointments")
     .add({
@@ -52,7 +52,7 @@ function addData() {
       date: date1,
     })
     .then((docRef) => {
-      alert("Appointment Booked" );
+      alert("Appointment booked! ");
       document.getElementById("myForm").reset();
     })
     .catch((error) => {

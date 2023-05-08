@@ -32,12 +32,36 @@
           <input id="email" type="email" placeholder="Email" class="box" />
           <input id="number" type="text" placeholder="Number" class="box" />
           <input id="gender" type="text" placeholder="Gender" class="box" />
-          <input id="allergies" type="text" placeholder="Allergies (if any)" class="box" />
+          <input
+            id="allergies"
+            type="text"
+            placeholder="Allergies (if any)"
+            class="box"
+          />
           <input id="date" type="date" placeholder="Date" class="box" />
-          <input type="button" value="Book"id="submitbtn" class="btn" />
+          <input type="button" value="Book" id="submitbtn" class="btn" />
         </form>
       </div>
     </section>
+    <div class="container">
+      <a href="index.html" class="btn homeBtn"
+        >Home <span class="fas fa-chevron-right"></span
+      ></a>
+    </div>
+
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 10px;
+        margin-bottom: 5%;
+      }
+      .homeBtn {
+        margin: 0 auto;
+        text-align: center;
+      }
+    </style>
   </body>
   <script src="js/booknow.js"></script>
 </html>

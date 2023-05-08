@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, intial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="css\form.css" />
+    <link rel="stylesheet" href="css\style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="#" class="logo"> <i class="fas fa-heartbeat"></i>Teeth First</a>
+
+      <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="#Feedbacks">Feedbacks</a>
+        <a href="#Social works">Social works</a>
+        <a href="#Partners">Partners</a>
+      </nav>
+
+      <div id="menu-btn" class="fas fa-bars"></div>
+    </header>
+    <div class="form">
+      <h2 style="text-align: center">Check Appointment</h2>
+      <br />
+      <form>
+        <label for="Email">Email: </label>
+        <input
+          style="width: 80%"
+          type="text"
+          id="email"
+          name="email"
+        /><br /><br />
+        <br />
+        <a href="displayApt.html"><div
+          style="text-align: center"
+          class="efg"
+          button
+          type="button"
+          id="checkBtn"
+          onclick="sendEmail(document.getElementById('email').value)"
+        >
+          Submit
+        </div></a>
+      </form>
+    </div>
+
+    <style>
+      .efg {
+        background-color: #eb3636;
+        border: none;
+        color: white;
+        padding: 10px 22px;
+        text-align: right;
+        font-size: 16px;
+        margin: 4px 2px;
+        opacity: 0.8;
+        transition: 0.3s;
+        display: inline-block;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .abc:hover {
+        opacity: 1;
+      }
+    </style>
+  </body>
+
+  <script>
+
+    //var email = document.getElementById('email').value;
+    function sendEmail(email) {
+      localStorage.setItem("email", email);
+      window.location.href = "displayApt.html";
+    }
+  </script>
+
+</html>
