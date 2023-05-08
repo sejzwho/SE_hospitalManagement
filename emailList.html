@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Appointment List</title>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-storage.js"></script>
+  </head>
+  <body>
+    <h1>Appointment List</h1>
+    <div id="appointment-list"></div>
+    <button onclick="logout()">Logout</button>
+
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyAyThyWBIXQiHIGe9B0V_PjEq_eHWPreRM",
+        authDomain: "semedtech-b49de.firebaseapp.com",
+        projectId: "semedtech-b49de",
+        storageBucket: "semedtech-b49de.appspot.com",
+        messagingSenderId: "891896801677",
+        appId: "1:891896801677:web:9ee15853f7bec5bd99b5c4",
+      };
+
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+
+      // Initialize Firebase Authentication
+      const auth = firebase.auth();
+
+      // Get the appointment list div
+      const appointmentList = document.getElementById("appointment-list");
+
+      auth.onAuthStateChanged((user) => {
+        if (user) {
+          db.collection("appointments")
+            .get()
+            .then((querySnapshot) => {
+              let html = "<ul>";
+              querySnapshot.forEach((doc) => {
+                const data = doc.data();
+                const email = data.email;
+                html += `<li><a href="adminDisplay.html?email=${email}">${email}</a></li>`; 
+              });
+              html += "</ul>";
+              appointmentList.innerHTML = html;
+            })
+            .catch((error) => {
+              console.log("Error getting documents: ", error);
+            });
+        } else {
+          
+          window.location.replace("login.html");
+        }
+      });
+
+      // Logout function
+      function logout() {
+        auth
+          .signOut()
+          .then(() => {
+            window.location.replace("login.html");
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      }
+    </script>
+  </body>
+</html>

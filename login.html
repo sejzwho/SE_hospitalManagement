@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, intial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="css\form.css" />
+    <link rel="stylesheet" href="css\style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+
+    <!-- Firebase Auth -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+
+    <!-- Firebase Firestore -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo"> <i class="fas fa-heartbeat"></i>Teeth First</a>
+
+      <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="#Feedbacks">Feedbacks</a>
+        <a href="#Social works">Social works</a>
+        <a href="#Partners">Partners</a>
+      </nav>
+
+      <div id="menu-btn" class="fas fa-bars"></div>
+    </header>
+    <div class="form">
+      <h2>Admin Login</h2>
+
+      <form id="loginform" autocomplete="off">
+        <div class="error-text">Error</div>
+
+        <div class="input">
+          <label> Email </label>
+          <input autocapitalize="off"
+            id="email"
+            style="margin-top: 5px"
+            type="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
+        </div>
+
+        <div class="input" style="margin-top: 15px" autocapitalize="off">
+          <label> Password </label>
+          <input
+          
+            id="password"
+            style="margin-top: 5px"
+            type="password"
+            name="pass"
+            placeholder="Password"
+            required
+            
+          />
+        </div>
+      </form>
+      <div class="submit" style="text-align: center">
+        <input
+          type="button"
+          id="login-btn"
+          value="Login"
+          class="button"
+          style="background-color: #16a085; margin-top: 10px"
+        />
+      </div>
+    </div>
+  </body>
+
+  <script src="js/adminLogin.js"></script>
+</html>

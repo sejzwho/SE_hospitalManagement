@@ -66,6 +66,10 @@ body {
     cursor: pointer;
 }
 
+form input{
+    text-transform: none;
+}
+
 form input [type="file"] {
     position: relative;
     height: 80px;
