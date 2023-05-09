@@ -34,15 +34,15 @@ Various features of MedXTech are:<br>
 
 ![MedXTech_02](https://user-images.githubusercontent.com/114832456/216946579-2eb06652-d74f-476d-986c-6622452fe93c.jpg)
 
-<html>
+<!-- <html>
 <head>
 <h2>03</h2>
 </head>
 </html>
 
-![MedXTech_03](https://user-images.githubusercontent.com/114832456/216946581-ac0cb5a7-930f-4377-9fdb-193b17c76165.jpg)
+![MedXTech_03](https://user-images.githubusercontent.com/114832456/216946581-ac0cb5a7-930f-4377-9fdb-193b17c76165.jpg) -->
 
-<html>
+<!-- <html>
 <head>
 <h2>04</h2>
 </head>
@@ -56,9 +56,9 @@ Various features of MedXTech are:<br>
 </head>
 </html>
 
-![MedXTech_05](https://user-images.githubusercontent.com/114832456/216946591-49fccc29-3160-4839-b83e-4ed2bcc1ab9a.jpg)
+![MedXTech_05](https://user-images.githubusercontent.com/114832456/216946591-49fccc29-3160-4839-b83e-4ed2bcc1ab9a.jpg) -->
 
-<html>
+<!-- <html>
 <head>
 <h2>06</h2>
 </head>
@@ -72,11 +72,11 @@ Various features of MedXTech are:<br>
 </head>
 </html>
 
-![MedXTech_07](https://user-images.githubusercontent.com/114832456/216946598-2e4bdb29-6ebc-4f72-a090-eb7566a74a76.jpg)
+![MedXTech_07](https://user-images.githubusercontent.com/114832456/216946598-2e4bdb29-6ebc-4f72-a090-eb7566a74a76.jpg) -->
 
 <html>
 <head>
-<h2>08</h2>
+<h2>03</h2>
 </head>
 </html>
 
@@ -84,23 +84,23 @@ Various features of MedXTech are:<br>
 
 <html>
 <head>
-<h2>09</h2>
+<h2>04</h2>
 </head>
 </html>
 
 ![MedXTech_09](https://user-images.githubusercontent.com/114832456/216946601-77b6a6f9-15db-46ee-96ec-898e2adaed87.jpg)
 
-<html>
+<!-- <html>
 <head>
 <h2>10</h2>
 </head>
 </html>
 
-![MedXTech_10](https://user-images.githubusercontent.com/114832456/216946603-7b946f1e-4568-413e-84e2-3aaea64cf3cb.jpg)
+![MedXTech_10](https://user-images.githubusercontent.com/114832456/216946603-7b946f1e-4568-413e-84e2-3aaea64cf3cb.jpg) -->
 
 <html>
 <head>
-<h2>11</h2>
+<h2>05</h2>
 </head>
 </html>
 
@@ -109,9 +109,9 @@ Various features of MedXTech are:<br>
 
 
 
-<h1>Future References:</h5>
+<!-- <h1>Future References:</h5>
 <ul>
   <li>Transations will be encrypted using blockchain technology.</li>
   <li>Collaborations could be done with the labs, pharmacies and the hospitals.</li>
   <li>Chatbots will be used for the 24*7 consumer interations and many more.</li>
-</ul>
+</ul> -->
