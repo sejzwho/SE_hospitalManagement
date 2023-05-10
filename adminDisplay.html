@@ -96,9 +96,19 @@
       <a href="emailList.html" class="btn homeBtn"
         >Check another appointment<span class="fas fa-chevron-right"></span
       ></a>
+
+      <a href="" id="delBtn" type="button" class="btn delBtn" style=""
+        >Delete appointment<span class="fas fa-chevron-right"></span
+      ></a>
     </div>
 
     <style>
+      .delBtn {
+        background-color: red;
+        color: white;
+        margin-left: 20px;
+        border-color: red;
+      }
       .container {
         display: flex;
         justify-content: center;
@@ -125,59 +135,109 @@
   </body>
   <script>
     const firebaseConfig = {
-        apiKey: "AIzaSyAyThyWBIXQiHIGe9B0V_PjEq_eHWPreRM",
-        authDomain: "semedtech-b49de.firebaseapp.com",
-        projectId: "semedtech-b49de",
-        storageBucket: "semedtech-b49de.appspot.com",
-        messagingSenderId: "891896801677",
-        appId: "1:891896801677:web:9ee15853f7bec5bd99b5c4",
-      };
-    
-      firebase.initializeApp(firebaseConfig);
-      const queryParams = new URLSearchParams(window.location.search);
-      const emailId = queryParams.get('email');
-      const db = firebase.firestore();
-      
-      const name1 = document.getElementById("name");
-      const age1 = document.getElementById("age");
-      const number1 = document.getElementById("number");
-      const gender1 = document.getElementById("gender");
-      const doctor1 = document.getElementById("doctor");
-      const date1 = document.getElementById("date");
+      apiKey: "AIzaSyAyThyWBIXQiHIGe9B0V_PjEq_eHWPreRM",
+      authDomain: "semedtech-b49de.firebaseapp.com",
+      projectId: "semedtech-b49de",
+      storageBucket: "semedtech-b49de.appspot.com",
+      messagingSenderId: "891896801677",
+      appId: "1:891896801677:web:9ee15853f7bec5bd99b5c4",
+    };
 
-      function getAppointmentByName() {
-  
-        db.collection("appointments")
+    firebase.initializeApp(firebaseConfig);
+    const queryParams = new URLSearchParams(window.location.search);
+    const emailId = queryParams.get("email");
+    const db = firebase.firestore();
+
+    const name1 = document.getElementById("name");
+    const age1 = document.getElementById("age");
+    const number1 = document.getElementById("number");
+    const gender1 = document.getElementById("gender");
+    const doctor1 = document.getElementById("doctor");
+    const date1 = document.getElementById("date");
+
+    function getAppointmentByName() {
+      db.collection("appointments")
+        .where("email", "==", emailId)
+        .get()
+        .then((querySnapshot) => {
+          querySnapshot.forEach((doc) => {
+            const data = doc.data();
+            const doctor = data.doctype;
+            const name = data.name;
+            const date = data.date;
+            const age = data.age;
+            const gender = data.gender;
+            const number = data.number;
+            console.log(doctor, name, date, age, gender, number);
+
+            name1.value = name;
+            age1.value = age;
+            number1.value = number;
+            gender1.value = gender;
+            doctor1.value = doctor;
+            date1.value = date;
+          });
+        })
+        .catch((error) => {
+          console.log("Error getting documents: ", error);
+        });
+    }
+    getAppointmentByName();
+
+    
+
+
+    db.collection("appointments")
       .where("email", "==", emailId)
       .get()
       .then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
           const data = doc.data();
-          const doctor = data.doctype;
-          const name = data.name;
-          const date = data.date;
-          const age = data.age;
-          const gender = data.gender;
-          const number = data.number;
-          console.log(doctor, name, date, age, gender,number);
+          const email = data.email;
+          console.log(email);
+          const delBtn = document.getElementById("delBtn");
+          delBtn.setAttribute("type", "button");
+          delBtn.addEventListener("click", () => handleDelete(email,event));
           
-          name1.value = name;
-          age1.value = age;
-          number1.value = number;
-          gender1.value = gender;
-          doctor1.value = doctor;
-          date1.value = date;
+          //= `<button onclick="handleDelete('${email}')">Delete</button>`;
         });
-        
       })
       .catch((error) => {
-        console.log("Error getting documents: ", error);
+        console.error("Error getting appointments: ", error);
       });
-    
+
+      function handleDelete(email,event) {
+        event.preventDefault();
+        const confirmDelete = confirm(
+          `Are you sure you want to delete the appointment for email: ${email}?`
+        );
+        if (confirmDelete) {
+          db.collection("appointments")
+          .where("email", "==", email)
+          .get()
+          .then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+              doc.ref
+                .delete()
+                .then(() => {
+                  console.log("Document successfully deleted!");
+                })
+                .catch((error) => {
+                  console.error("Error removing document: ", error);
+                });
+            });
+          })
+          .catch((error) => {
+            console.error("Error getting documents: ", error);
+          });
+        }
       }
 
-      getAppointmentByName();
+      function deleteDocument(email) {
+        console.log("deleteDoc called with: ", email)
+        
+      }
 
-
+    
   </script>
 </html>

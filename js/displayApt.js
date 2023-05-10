@@ -22,6 +22,10 @@ const firebaseConfig = {
   const date1 = document.getElementById("date");
 
   function getAppointmentByName() {
+
+    const collectionName = "appointments";
+
+
   
     db.collection("appointments")
   .where("email", "==", emailIn)
@@ -49,6 +53,8 @@ const firebaseConfig = {
   .catch((error) => {
     console.log("Error getting documents: ", error);
   });
+
+  
 
   
 
