@@ -106,12 +106,3 @@ Various features of MedXTech are:<br>
 
 ![MedXTech_11](https://user-images.githubusercontent.com/114832456/216946608-ca1b8607-bfd3-4012-97d8-28667e8e684e.jpg)
 
-
-
-
-<h1>Future References:</h5>
-<ul>
-  <li>Transations will be encrypted using blockchain technology.</li>
-  <li>Collaborations could be done with the labs, pharmacies and the hospitals.</li>
-  <li>Chatbots will be used for the 24*7 consumer interations and many more.</li>
-</ul>
