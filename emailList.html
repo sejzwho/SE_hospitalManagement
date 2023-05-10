@@ -41,7 +41,7 @@
               querySnapshot.forEach((doc) => {
                 const data = doc.data();
                 const email = data.email;
-                html += `<li><a href="adminDisplay.html?email=${email}">${email}</a></li>`; 
+                html += `<li style="margin:5px 0px"><a style="text-decoration: none; font-size:large; color:black;" href="adminDisplay.html?email=${email}">${email}</a></li>`; 
               });
               html += "</ul>";
               appointmentList.innerHTML = html;
@@ -67,5 +67,14 @@
           });
       }
     </script>
+    <style>
+      .listItemLink{
+        
+      }
+      .listitem{
+        text-decoration: none;
+
+      }
+    </style>
   </body>
 </html>
