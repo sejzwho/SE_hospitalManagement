@@ -96,7 +96,6 @@ Various features of MedXTech are:<br>
 </head>
 </html>
 
-![MedXTech_10](https://user-images.githubusercontent.com/114832456/216946603-7b946f1e-4568-413e-84e2-3aaea64cf3cb.jpg)
 
 <html>
 <head>
@@ -104,5 +103,5 @@ Various features of MedXTech are:<br>
 </head>
 </html>
 
-![MedXTech_11](https://user-images.githubusercontent.com/114832456/216946608-ca1b8607-bfd3-4012-97d8-28667e8e684e.jpg)
+
 
